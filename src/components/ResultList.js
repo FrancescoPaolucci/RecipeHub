@@ -20,7 +20,7 @@ const ResultList = ({title, recipes,hasError}) => {
   const createTwoButtonAlert = (param) =>
   Alert.alert(
     "You are going to delete this recipe",
-    "Are you sure you wanna delete your mamma",
+    "Are you sure you wanna delete it ?",
     [
       {
         text: "Cancel",
