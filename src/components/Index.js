@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, Text, StyleSheet, Button} from 'react-native';
-import ResultList from '../components/ResultList'
-import getRecipes from '../components/getRecipes'
+import ResultList from './ResultList'
+import getRecipes from './getRecipes'
 import { ScrollView } from 'react-native-gesture-handler';
 
 const Index = ({navigation})=>{

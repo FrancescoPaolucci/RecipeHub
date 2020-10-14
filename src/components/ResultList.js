@@ -1,14 +1,16 @@
 import React  from "react";
 import {View, Text, FlatList, StyleSheet, TouchableOpacity, Alert} from 'react-native';
 import ResultsDetails from '../components/ResultsDetail';
-import * as axios from 'axios';
+import getRecipes from '../components/getRecipes'
+import {withNavigation} from 'react-navigation'
 
 
+const ResultList = ({title,navigation}) => {
 
+const [recipes,hasError] = getRecipes();
 
-
-const ResultList = ({title, recipes,hasError}) => {
-
+  console.log(navigation)
+  
   const deleteRecipe=async(id)=>{
     const response = await fetch("https://recipehub-291212.ew.r.appspot.com/rest/Recipeservice/deleterecipe/"+id,
     {
@@ -34,6 +36,7 @@ const ResultList = ({title, recipes,hasError}) => {
 
 
 
+
     return (
       <View style={{marginTop:50}}>
         <Text>{title} </Text>
@@ -43,7 +46,7 @@ const ResultList = ({title, recipes,hasError}) => {
             data={recipes}
             keyExtractor={(item) => item.id.toString()}
             renderItem={({item}) => { return(
-                <TouchableOpacity onPress={()=>('ShowMethod',{id: item.id})} onLongPress={()=>createTwoButtonAlert(item)} >
+                <TouchableOpacity onPress={()=>navigation.navigate('recipe')} onLongPress={()=>createTwoButtonAlert(item)} >
               <View>
                   <ResultsDetails result={item}/>
               </View>
@@ -57,4 +60,4 @@ const ResultList = ({title, recipes,hasError}) => {
 
 const styles=StyleSheet.create({});
 
-export default ResultList;
+export default withNavigation(ResultList);
