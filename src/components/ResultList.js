@@ -14,16 +14,20 @@ import { withNavigation } from "react-navigation";
 const ResultList = ({ title, navigation }) => {
   const [recipes, hasError] = getRecipes();
 
-  console.log(navigation);
+  const ResultList = ({ title, navigation }) => {
+    const [recipes, hasError] = getRecipes();
 
-  const deleteRecipe = async (id) => {
-    const response = await fetch(
-      "https://recipehub-291212.ew.r.appspot.com/rest/Recipeservice/deleterecipe/" +
-        id,
-      {
-        method: "DELETE",
-      }
-    );
+    console.log(navigation);
+
+    const deleteRecipe = async (id) => {
+      const response = await fetch(
+        "https://recipehub-291212.ew.r.appspot.com/rest/Recipeservice/deleterecipe/" +
+          id,
+        {
+          method: "DELETE",
+        }
+      );
+    };
   };
 
   const createTwoButtonAlert = (param) =>
@@ -52,7 +56,7 @@ const ResultList = ({ title, navigation }) => {
         renderItem={({ item }) => {
           return (
             <TouchableOpacity
-              onPress={() => navigation.navigate("Recipe")}
+              onPress={() => navigation.navigate("recipe")}
               onLongPress={() => createTwoButtonAlert(item)}
             >
               <View>
