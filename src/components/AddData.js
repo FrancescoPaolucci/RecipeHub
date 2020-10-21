@@ -18,7 +18,7 @@ const AddData = () => {
 
 
   async function saveRecipe() {
-    const response = await fetch("https://recipehub-291212.ew.r.appspot.com/rest/Recipeservice/addingRecipe",
+    const response = await fetch("https://ringed-bebop-293214.appspot.com/rest/Recipeservice/addingRecipe",
     {
       method:'POST',
       headers:{

@@ -7,7 +7,7 @@ render(){
     return(
     
         <View> 
-        <Text>So Who's Gay</Text>
+        <Text>Bruhhh</Text>
         </View>
     )
 }

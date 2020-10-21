@@ -16,7 +16,7 @@ export default ()=> {
     let res = null;
     try{
       //This will wait the fetch to be done - it is also timeout which might be a response (server timeouts)
-      res=await fetch("https://recipehub-291212.ew.r.appspot.com/rest/Recipeservice/getRecipes");
+      res=await fetch("https://ringed-bebop-293214.appspot.com/rest/Recipeservice/getRecipes");
     }
     catch(error){
       setErrors(true);
