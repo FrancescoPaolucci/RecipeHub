@@ -3,16 +3,23 @@ import { createStackNavigator } from 'react-navigation-stack';
 import Index from './src/components/Index';
 import AddData from './src/components/AddData'
 import recipescreen from './src/screens/recipescreen'
+import SearchScreen from './src/screens/SearchScreen';
+import ResultsShowScreen from './src/screens/ResultsShowScreen';
+
 
 const navigator = createStackNavigator({
 
   Index: Index,
   Add: AddData,
-  recipe: recipescreen
+  recipe: recipescreen,
+  Search: SearchScreen,
+  ResultsShow: ResultsShowScreen
+
+
 
 
 },{
-    initialRouteName: 'Index',
+    initialRouteName: 'Search',
     title: 'RecipesHub'
 });
 
