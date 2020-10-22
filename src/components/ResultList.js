@@ -10,7 +10,7 @@ import {
 import ResultsDetails from "../components/ResultsDetail";
 import getRecipes from "../components/getRecipes";
 import { withNavigation } from "react-navigation";
-import RNRestart from 'react-native-restart'; 
+
 
 const ResultList = ({ title, navigation }) => {
   const [recipes, hasError] = getRecipes();

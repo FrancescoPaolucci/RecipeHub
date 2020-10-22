@@ -20,13 +20,15 @@ const ResultsShowScreen=({navigation})=>{
     }
      
     return (
-        <View>
-            <Text>{result.name}</Text>
+        <View style={styles.view}>
+            <Text style={styles.title}>{result.name}</Text>
             <FlatList
             data={result.photos}
             keyExtractor={(photo)=>photo}
             renderItem={({item})=>{
-                return <Image style={styles.image} source ={{uri: item}}/>
+                return( 
+                     <Image style={styles.image} source ={{uri: item}}/> 
+                )
 
             }}
             />
@@ -36,9 +38,30 @@ const ResultsShowScreen=({navigation})=>{
 
 const styles = StyleSheet.create({
     image:{
-        height:200,
-        width: 300,
+        height:250,
+        width: 370,
+        borderWidth: 3,
+        borderColor: '#d4467c',
+        marginTop:5
+        
+      
+        
+        
+
+    },
+
+    view:{
+        marginTop:10,
+        marginBottom: 20,
+        alignSelf:'center'
+    },
+
+    title:{
+            fontSize:30,
+            alignSelf:'center'
+           
     }
+
 });
 
 export default ResultsShowScreen;
