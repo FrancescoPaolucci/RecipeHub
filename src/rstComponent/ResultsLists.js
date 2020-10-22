@@ -19,7 +19,7 @@ return (
         renderItem={({item})=>{
          
            return (
-               <TouchableOpacity onPress={()=> navigation.navigate('ResultsShow',{id: item.id})}>
+               <TouchableOpacity onPress={()=> navigation.navigate('ResultsShow',{method: item.method})}>
             <ResultsDetails result={item}/>
             </TouchableOpacity>
            ) 
