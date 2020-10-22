@@ -19,7 +19,7 @@ const navigator = createStackNavigator({
 
 
 },{
-    initialRouteName: 'Search',
+    initialRouteName: 'Index',
     title: 'RecipesHub'
 });
 
