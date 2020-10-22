@@ -5,6 +5,8 @@ import AddData from './src/components/AddData'
 import recipescreen from './src/screens/recipescreen'
 import SearchScreen from './src/screens/SearchScreen';
 import ResultsShowScreen from './src/screens/ResultsShowScreen';
+import StartScreen from './src/screens/StartScreen';
+
 
 
 const navigator = createStackNavigator({
@@ -13,13 +15,15 @@ const navigator = createStackNavigator({
   Add: AddData,
   recipe: recipescreen,
   Search: SearchScreen,
-  ResultsShow: ResultsShowScreen
+  ResultsShow: ResultsShowScreen,
+  Start: StartScreen,
+
 
 
 
 
 },{
-    initialRouteName: 'Index',
+    initialRouteName: 'Start',
     title: 'RecipesHub'
 });
 
