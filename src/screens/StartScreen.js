@@ -21,7 +21,7 @@ const StartScreen = ({ navigation }) => {
         <View style={styles.button}>
           <Button
             title="Recipes"
-            onPress={() => navigation.navigate("RecipePage")}
+            onPress={() => navigation.navigate("Index")}
           />
         </View>
         <View style={styles.button}>

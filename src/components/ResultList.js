@@ -10,25 +10,23 @@ import {
 import ResultsDetails from "../components/ResultsDetail";
 import getRecipes from "../components/getRecipes";
 import { withNavigation } from "react-navigation";
+import RNRestart from 'react-native-restart'; 
 
 const ResultList = ({ title, navigation }) => {
   const [recipes, hasError] = getRecipes();
-
-  const ResultList = ({ title, navigation }) => {
-    const [recipes, hasError] = getRecipes();
 
     console.log(navigation);
 
     const deleteRecipe = async (id) => {
       const response = await fetch(
-        "https://recipehub-291212.ew.r.appspot.com/rest/Recipeservice/deleterecipe/" +
+        "https://ringed-bebop-293214.appspot.com/rest/Recipeservice/deleterecipe/" +
           id,
         {
           method: "DELETE",
         }
       );
     };
-  };
+  
 
   const createTwoButtonAlert = (param) =>
     Alert.alert(
