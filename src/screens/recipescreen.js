@@ -1,17 +1,23 @@
 import React from 'react';
-import {Text, View, Button, StyleSheet} from 'react-native'
-import recipes from '../components/getRecipes';
+import {Text, View, StyleSheet} from 'react-native'
+import {withNavigation} from 'react-navigation';
+
  
-class recipescreen extends React.Component{
-render(){
-    return(
-    
-        <View> 
-        <Text>Bruhhh</Text>
-        </View>
-    )
+const recipescreen = ({navigation}) => {
+
+    const method = navigation.getParam('method');
+    console.log(method)
+  return(
+
+    <View>
+        <Text>{method}</Text>
+    </View>
+
+      
+  
+  )
 }
-};
+
  
 const styles = StyleSheet.create({
  
