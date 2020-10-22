@@ -1,15 +1,24 @@
-import React from "react";
-import { View, StyleSheet, Text } from "react-native";
-import { withNavigation } from "react-navigation";
+import React from 'react';
+import {Text, View, StyleSheet} from 'react-native'
+import {withNavigation} from 'react-navigation';
 
-const RecipeScreen = () => {
-  return (
-  <View style={styles.container}>
-  <Text>{this.props.route.params.item.id}</Text>
-  </View>
-  );
-};
+ 
+const recipescreen = ({navigation}) => {
 
+    const method = navigation.getParam('method');
+    console.log(method)
+  return(
+
+    <View>
+        <Text>{method}</Text>
+    </View>
+
+      
+  
+  )
+}
+
+ 
 const styles = StyleSheet.create({
   container: {
     flex: 1,

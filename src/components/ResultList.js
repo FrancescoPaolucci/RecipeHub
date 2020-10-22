@@ -10,7 +10,7 @@ import {
 import ResultsDetails from "../components/ResultsDetail";
 import getRecipes from "../components/getRecipes";
 import { withNavigation } from "react-navigation";
-import RNRestart from 'react-native-restart'; 
+
 
 const ResultList = ({ title, navigation }) => {
   const [recipes, hasError] = getRecipes();
@@ -54,7 +54,11 @@ const ResultList = ({ title, navigation }) => {
         renderItem={({ item }) => {
           return (
             <TouchableOpacity
+<<<<<<< HEAD
               onPress={() =>navigation.navigate("recipe",{recipeId: item.id})}
+=======
+              onPress={() => navigation.navigate('recipe',{method: item.method})}
+>>>>>>> 6c3abb316f9f0354dab3003bf156764994169d61
               onLongPress={() => createTwoButtonAlert(item)}
             >
               <View>

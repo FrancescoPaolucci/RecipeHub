@@ -6,7 +6,7 @@ import recipescreen from './src/screens/recipescreen'
 import SearchScreen from './src/screens/SearchScreen';
 import ResultsShowScreen from './src/screens/ResultsShowScreen';
 import StartScreen from './src/screens/StartScreen';
-import ResultList from './src/components/ResultList';
+
 
 
 const navigator = createStackNavigator({
@@ -17,7 +17,7 @@ const navigator = createStackNavigator({
   Search: SearchScreen,
   ResultsShow: ResultsShowScreen,
   Start: StartScreen,
-  RecipePage: ResultList,
+
 
 
 
