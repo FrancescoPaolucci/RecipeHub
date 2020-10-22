@@ -54,11 +54,7 @@ const ResultList = ({ title, navigation }) => {
         renderItem={({ item }) => {
           return (
             <TouchableOpacity
-<<<<<<< HEAD
-              onPress={() =>navigation.navigate("recipe",{recipeId: item.id})}
-=======
-              onPress={() => navigation.navigate('recipe',{method: item.method})}
->>>>>>> 6c3abb316f9f0354dab3003bf156764994169d61
+              onPress={() => navigation.navigate('recipe',{item: item})}
               onLongPress={() => createTwoButtonAlert(item)}
             >
               <View>
