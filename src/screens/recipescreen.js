@@ -1,20 +1,20 @@
-import React from 'react';
-import {Text, View, Button, StyleSheet} from 'react-native'
-import recipes from '../components/getRecipes';
- 
-class recipescreen extends React.Component{
-render(){
-    return(
-    
-        <View> 
-        <Text>Bruhhh</Text>
-        </View>
-    )
-}
+import React from "react";
+import { View, StyleSheet, Text } from "react-native";
+import { withNavigation } from "react-navigation";
+
+const RecipeScreen = () => {
+  return (
+  <View style={styles.container}>
+  <Text>{this.props.route.params.item.id}</Text>
+  </View>
+  );
 };
- 
+
 const styles = StyleSheet.create({
- 
+  container: {
+    flex: 1,
+    backgroundColor: "white",
+  },
 });
- 
-export default recipescreen;
+
+export default withNavigation(RecipeScreen);
