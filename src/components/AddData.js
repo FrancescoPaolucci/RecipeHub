@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import {Button, TextInput, View, Text, FlatList, StyleSheet, Alert, ActivityIndicator} from 'react-native';
+import { ScrollView } from "react-native-gesture-handler";
 // import { TextInput } from "react-native-gesture-handler";
 
 const AddData = () => {
@@ -30,7 +31,7 @@ const AddData = () => {
 
   }
     return (
-      <View style={{marginTop:50, flex:1}}>
+      <ScrollView style={{marginTop:50, flex:1}}>
       <View style={styles.inputcontainer}>
         <TextInput placeholder="Name" 
                   style={styles.inputStyle} 
@@ -49,7 +50,7 @@ const AddData = () => {
                   onChangeText={(newValue)=>setRecipeImage(newValue)}
                   value={setRecipeImage}/>    
               <TextInput placeholder="Method" 
-                  style={styles.inputStyle} 
+                  style={styles.methodinput} 
                   onChangeText={(newValue)=>setRecipeMethod(newValue)}
                   value={RecipeMethod}/>   
 
@@ -57,11 +58,19 @@ const AddData = () => {
       <View style={styles.buttoncontainer}>
         <Button title="Add" onPress={addRecipeHandler}/>
       </View>
-      </View>
+      </ScrollView> 
     );
 };
 
 const styles=StyleSheet.create({
+
+  methodinput:{
+    width:300,
+    height:300,
+    padding:10,
+    borderWidth:2,
+    borderColor:'#f00',
+  },
   listItem:{
     padding: 10,
     marginVertical: 10,
