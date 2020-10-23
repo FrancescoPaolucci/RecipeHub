@@ -8,12 +8,11 @@ import {
   Alert,
 } from "react-native";
 import ResultsDetails from "../components/ResultsDetail";
-import getRecipes from "../components/getRecipes";
 import { withNavigation } from "react-navigation";
 
 
-const ResultList = ({ title, navigation }) => {
-  const [recipes, hasError] = getRecipes();
+const ResultList = ({ title, navigation, recipes }) => {
+  
 
     console.log(navigation);
 
@@ -45,8 +44,8 @@ const ResultList = ({ title, navigation }) => {
 
   return (
     <View style={{ marginTop: 50 }}>
-      <Text>{title} </Text>
-      <Text>{hasError} </Text>
+      <Text style={styles.title}>{title}</Text>
+     
       <FlatList
         horizontal={true}
         data={recipes}
@@ -68,6 +67,13 @@ const ResultList = ({ title, navigation }) => {
   );
 };
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  title:{
+    fontSize:30,
+    paddingLeft: 10
+    
+  }
+
+});
 
 export default withNavigation(ResultList);

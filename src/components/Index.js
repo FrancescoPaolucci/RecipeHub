@@ -8,10 +8,10 @@ const Index = ({navigation})=>{
 
   const [recipes,hasError] = getRecipes();
 
-const filterResultsBytime = (time, samay) =>{
+const filterResultsBytime = (time,time1) =>{
 
-  return recipes.filter (recipes =>{
-      return recipes.time >= time && recipes.time <= samay;
+  return recipes.filter (recipe =>{
+      return recipe.time >= time && recipe.time <= time1 ;
       
   });
 };
@@ -20,9 +20,9 @@ return(
   <View >   
     <ScrollView>
 {hasError ? <Text>{hasError}</Text> : null} 
-<ResultList recipes={filterResultsBytime(45,1000)} title="More or eq 40" />
-<ResultList recipes={filterResultsBytime(30, 40)} title="More than 30 less 60" />
-<ResultList recipes={filterResultsBytime(0, 30)} title="more than 0 less eq 30" />
+<ResultList recipes={filterResultsBytime(45,1000)} title="Takes a lot of time" />
+<ResultList recipes={filterResultsBytime(30,40)} title="Takes some time" />
+<ResultList recipes={filterResultsBytime(0,30)} title="Quick cooking" />
 <Button 
     onPress={()=>navigation.navigate('Add')}
     title= "Add recipe!" 
